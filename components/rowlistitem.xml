@@ -43,8 +43,6 @@
     end function
 
     function itemSelected(e as object) as void
-        print "item-->"
-        print e
     end function
 
     ]]>
