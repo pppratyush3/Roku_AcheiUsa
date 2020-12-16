@@ -1,24 +1,22 @@
 <?xml version = "1.0" encoding = "utf-8" ?>
 
 <!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
- 
-<component name = "RowListItem" extends = "Group" >
- 
-  <interface > 
+
+<component name = "RowListItem" extends = "Group">
+
+  <interface >
     <field id = "itemContent" type = "node" onChange = "showcontent"/>
-    <field id = "focusPercent" type = "float" onChange = "showfocus"/> 
+    <field id = "focusPercent" type = "float" onChange = "showfocus"/>
     <field id = "rowFocusPercent" type = "float" onChange = "showrowfocus"/>
   </interface>
- 
-  <script type = "text/brightscript" >
+
+  <script type = "text/brightscript">
 
     <![CDATA[
 
     sub init()
       m.itemposter = m.top.findNode("itemPoster") 
       m.itemlabel = m.top.findNode("itemLabel")
-	    m.top.ObserveField("rowItemSelected", "onRowItemFocused")
-	    m.top.ObserveField("ItemSelected", "itemSelected")
     end sub
 
     sub showcontent(e as object)
@@ -35,32 +33,16 @@
     sub showrowfocus(e as object)
       m.itemlabel.opacity = m.top.rowFocusPercent
     end sub
-
-  function onRowItemFocused() as void
-        row = m.top.rowItemFocused[0]
-        col = m.top.rowItemFocused[1]
-      
-    end function
-
-    function itemSelected(e as object) as void
-    end function
-
     ]]>
 
   </script>
 
   <children >
 
-    <Poster 
-      id = "itemPoster" 
-      translation = "[ 0, 0 ]" 
-      width = "220" 
-      height = "140">
-         <Label 
-      id = "itemLabel" 
-      translation = "[ 100, 30 ]" 
-      horizAlign = "left" 
-      width = "220"/>
+    <Poster id="itemPoster" translation="[0,0]" width="355" height="230">
+      <Label id="itemLabel" horizAlign="center" translation="[0,175]" width="350" height="65">
+        <Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="30"/>
+      </Label>
     </Poster>
   </children>
 

@@ -9,6 +9,8 @@ sub showChannelSGScreen()
   m.port = CreateObject("roMessagePort")
   screen.setMessagePort(m.port)
   scene = screen.CreateScene("RowListExample")
+  m.global = screen.getGlobalNode()
+
   screen.show()
 
   while(true)

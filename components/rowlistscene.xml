@@ -1,81 +1,60 @@
-<?xml version = "1.0" encoding = "utf-8" ?> 
+<?xml version = "1.0" encoding = "utf-8" ?>
 
 <!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
 
-<component name = "RowListExample" extends = "Scene" initialFocus = "exampleRowList" >
+<component name = "RowListExample" extends = "Scene" initialFocus = "exampleRowList">
 
-	<script type="text/brightscript" uri="pkg:/components/rowlistscene.brs" />
+  <script type="text/brightscript" uri="pkg:/components/rowlistscene.brs" />
 
   <children >
 
-   <Rectangle 
+    <Rectangle 
         id = "rect" 
         color = "0x000000FF" 
-        opacity = "0.55" 
-        width = "1280" 
-        height = "720" 
+        opacity = "0.7" 
+        width = "1900" 
+        height = "1124" 
         scaleRotateCenter = "[ 256.0, 144.0 ]">
 
-        <Label 
-        id="mainTitle" 
-        translation="[100,150]"
-         width="700"
-          wrap="true"
+      <Label id="mainTitle" translation="[100,150]" width="700" wrap="true"
           horizAlign = "left"
-          vertAlign = "top"
-        height="50">
-	    		<Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="30"/>
-	    	</Label>
+          vertAlign = "top" height="50">
+        <Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="30"/>
+      </Label>
 
 
-         <Label
-        translation="[150, 200]" width="1000"
-        id="date"
-                  height="50"
+      <Label translation="[150, 200]" width="1000" id="date" height="50"
                   vertAlign = "top"
-        horizAlign = "left"
->
-        	<Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="15"/>
-	    	</Label>
+        horizAlign = "left">
+        <Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="15"/>
+      </Label>
 
 
-         <Label
-        translation="[100, 200]" width="1000"
-        id="quality"
-                  height="50"
+      <Label translation="[100, 200]" width="1000" id="quality" height="50"
                   vertAlign = "top"
-        horizAlign = "left"
-        >
-        	<Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="15"/>
-	    	</Label>
+        horizAlign = "left">
+        <Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="15"/>
+      </Label>
 
 
-        <Label 
-        id="description" 
-        translation="[100,250]"
-         width="600"
-          height="100"
-          horizAlign = "left"
-          wrap="true" numLines="4"
-          vertAlign = "top"
-           lineSpacing="1"
-         >
-	    		<Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="20"/>
-	    	</Label>
+      <Label id="description" translation="[100,250]" width="600" height="100"
+          horizAlign = "left" wrap="true" numLines="4"
+          vertAlign = "top" lineSpacing="1">
+        <Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="20"/>
+      </Label>
 
-        <MaskGroup maskUri="pkg:/images/detailPageGradient.png" maskSize="[1280,720]" maskOffset="[300,0]">
-	   			<Poster id="topBackgroundPoster"  width="1280" height="400" />
-	    	</MaskGroup>
+      <MaskGroup maskUri="pkg:/images/detailPageGradient.png" maskSize="[1600,600]" maskOffset="[300,0]">
+        <Poster id="topBackgroundPoster" width="1900" height="720" />
+      </MaskGroup>
 
       <RowList 
         id = "exampleRowList"   
-        translation = "[ 100, 340 ]" 
+        translation = "[ 100, 500 ]" 
         itemComponentName = "RowListItem" 
-        numRows = "2" 
-        itemSize = "[ 1280, 208 ]" 
-        rowItemSize = "[ [226, 148] ]" 
-        itemSpacing = "[ 10, 10 ]" 
-        showRowLabel = "[ true ]" 
+        numRows = "5" 
+        itemSize = "[ 1124, 220 ]" 
+        rowItemSize = "[ [373, 233] ]" 
+        showRowLabel = "[ true, true ]" 
         drawFocusFeedback = "true" 
         vertFocusAnimationStyle = "fixedFocusWrap" 
         rowFocusAnimationStyle = "fixedFocusWrap" />

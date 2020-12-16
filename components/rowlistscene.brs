@@ -44,6 +44,17 @@ sub onRowItemSelected(msg as object)
     m.detailDescription.text = m.obj.tvSpecials[row].shortDescription
 
     m.detailScreen.visible = true
+
+    m.top.videoTitle = m.obj.tvSpecials[row].title
+    m.global.videoLink = m.obj.tvSpecials[row].content.videos[col].url
+    print "video link"
+    print m.global.videoLink
+    print m.obj.tvSpecials[row].content.videos[col].url
+    print "video title"
+    print m.top.videoTitle
+    print m.obj.tvSpecials[row].title
+
+    m.detailScreen.setFocus(true)
     m.rect.visible = false
 end sub
 
