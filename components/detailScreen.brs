@@ -3,7 +3,7 @@ sub init()
     m.buttons.buttons = ["Watch now", "Add to playlist"]
     m.video = m.top.findNode("detailScreenVideo")
     m.buttons.observeField("buttonSelected", "playVideo")
-
+    print m.global.deeplink
 end sub
 
 function onKeyEvent(key as string, press as boolean) as boolean

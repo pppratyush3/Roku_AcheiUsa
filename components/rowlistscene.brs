@@ -1,7 +1,7 @@
 sub init()
 
-    rowlist = m.top.findNode("exampleRowList")
-    rowlist.content = getContent()
+    m.rowlist = m.top.findNode("exampleRowList")
+    m.rowlist.content = getContent()
 
     m.poster = m.top.findNode("topBackgroundPoster")
     m.detailPoster = m.top.findNode("detailBackgroundPoster")
@@ -17,9 +17,9 @@ sub init()
     m.detailDuration = m.top.findNode("duration")
     m.detailDescription = m.top.findNode("detailDescription")
 
-    rowList.observefield("rowItemFocused", "onRowItemFocused")
-    rowList.observeField("rowItemSelected", "onRowItemSelected")
-    m.top.setFocus(true)
+    m.rowList.observefield("rowItemFocused", "onRowItemFocused")
+    m.rowList.observeField("rowItemSelected", "onRowItemSelected")
+    m.rowList.setFocus(true)
 end sub
 
 sub onRowItemFocused(msg as object)
@@ -80,12 +80,12 @@ function getContent()
 end function
 
 function OnkeyEvent(key as string, press as boolean) as boolean
-    print "back to main scene"
     result = false
     if (key = "back") and press = true
         m.rect.visible = true
         m.detailScreen.visible = false
         result = true
+        m.rowList.setFocus(true)
     end if
     return result
 end function
