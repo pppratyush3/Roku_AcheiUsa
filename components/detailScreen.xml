@@ -60,9 +60,7 @@
 
 			<ButtonGroup id="detailScreenButton" buttonHeight="65" layoutDirection="horiz" translation="[150,700]"/>
 
-			<Video width="1600" height="1100" id="detailScreenVideo" visible="false" />
-
+			<Video width="1900" height="1100" id="detailScreenVideo" visible="false" />
 		</Rectangle>
-		<Video id ="videoNode" visible="false"></Video>
 	</children>
 </component>

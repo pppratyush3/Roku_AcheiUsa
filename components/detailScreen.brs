@@ -38,6 +38,7 @@ function playVideo(msg as object)
             videocontent.url = "https://player.vimeo.com/external/355618127.hd.mp4?s=a8269a0c23e577c19d2053df4f25fd5026fe2290&profile_id=174"
             m.video.content = videocontent
             m.video.visible = true
+            m.video.control = "play"
             print "m.top.videoTitle"
             print m.top.videoTitle
             print "m.global.videoLink"
