@@ -4,16 +4,12 @@ sub init()
     m.video = m.top.findNode("detailScreenVideo")
     m.buttons.observeField("buttonSelected", "playVideo")
 
-    m.top.setFocus(true)
 end sub
 
 function onKeyEvent(key as string, press as boolean) as boolean
     result = false
 
     if key = "right" or key = "left"
-        print "key==?"
-        print key
-        print m.buttons
         if m.buttons.buttonFocused = 0
             m.buttons.buttonFocused = 1
         else
@@ -21,10 +17,15 @@ function onKeyEvent(key as string, press as boolean) as boolean
         end if
         result = true
     else if key = "back"
-        print "back"
-        m.video.control = "stop"
-        m.video.visible = false
-        result = true
+        m.buttons.focusButton = 0
+        if m.video.visible
+            m.video.control = "stop"
+            m.video.visible = false
+            result = true
+            m.top.SetFocus(true)
+        else
+            result = false
+        end if
     end if
     return result
 end function
@@ -43,6 +44,8 @@ function playVideo(msg as object)
             print m.top.videoTitle
             print "m.global.videoLink"
             print m.global.videoLink
+            m.video.setFocus(true)
+
 
         end if
     end if
