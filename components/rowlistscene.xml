@@ -16,46 +16,54 @@
         height = "1124" 
         scaleRotateCenter = "[ 256.0, 144.0 ]">
 
-      <Label id="mainTitle" translation="[100,150]" width="700" wrap="true"
+      <Label id="mainTitle" translation="[100,90]" width="1000" wrap="true"
           horizAlign = "left"
-          vertAlign = "top" height="50">
-        <Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="30"/>
+          vertAlign = "top" height="100">
+        <Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="45"/>
       </Label>
 
 
-      <Label translation="[150, 200]" width="1000" id="date" height="50"
+      <Label translation="[150, 180]" width="1000" id="date" height="50"
                   vertAlign = "top"
         horizAlign = "left">
-        <Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="15"/>
+        <Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-Regular.ttf" size="25"/>
       </Label>
 
 
-      <Label translation="[100, 200]" width="1000" id="quality" height="50"
+      <Label translation="[100, 180]" width="1000" id="quality" height="50"
                   vertAlign = "top"
         horizAlign = "left">
-        <Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="15"/>
+        <Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="25"/>
       </Label>
 
 
-      <Label id="description" translation="[100,250]" width="600" height="100"
+      <Label id="description" translation="[100,240]" width="1000" height="200"
           horizAlign = "left" wrap="true" numLines="4"
           vertAlign = "top" lineSpacing="1">
-        <Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="20"/>
+        <Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-Regular.ttf" size="30"/>
       </Label>
 
-      <MaskGroup maskUri="pkg:/images/detailPageGradient.png" maskSize="[1600,600]" maskOffset="[300,0]">
+      <Label id="subTitle" text="AcheiUSA Newspaper - Parte 01" translation="[100,440]" width="1000" wrap="true"
+          horizAlign = "left"
+          vertAlign = "top" height="100">
+        <Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="35"/>
+      </Label>
+
+      <MaskGroup maskUri="pkg:/images/detailPageGradient.png" maskSize="[1600,600]" maskOffset="[500,0]">
         <Poster id="topBackgroundPoster" width="1900" height="720" />
       </MaskGroup>
 
       <RowList 
         id = "exampleRowList"   
-        translation = "[ 100, 500 ]" 
+        translation = "[ 100, 520 ]" 
         itemComponentName = "RowListItem" 
         numRows = "5" 
-        itemSize = "[ 1124, 220 ]" 
-        rowItemSize = "[ [373, 233] ]" 
-        showRowLabel = "[ true, true ]" 
+        itemSize = "[ 1600, 220 ]"
+        itemSpacing = "[ 20, 50 ]" 
+        rowItemSize = "[ [290, 195] ]" 
+        showRowLabel = "[ false ]" 
         drawFocusFeedback = "true" 
+				rowItemSpacing = "[ [50, 50] ]"
         vertFocusAnimationStyle = "fixedFocusWrap" 
         rowFocusAnimationStyle = "fixedFocusWrap" />
 

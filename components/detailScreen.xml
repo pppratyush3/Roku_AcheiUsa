@@ -8,83 +8,61 @@
 
 	<children>
 
-	<Rectangle 
+		<Rectangle 
         id = "rect" 
         color = "0x000000FF" 
-        opacity = "0.65" 
-        width = "1280" 
-        height = "720" 
+        opacity = "0.75" 
+        width = "1900" 
+        height = "1124" 
         scaleRotateCenter = "[ 256.0, 144.0 ]">
 
-  <MaskGroup maskUri="pkg:/images/detailPageGradient.png" maskSize="[1280,720]" maskOffset="[300,0]">
-	   	<Poster id="detailBackgroundPoster" translation = "[ 0, 0 ]" 
-        width = "1280" 
-        height = "720" 
-        opacity = "0.55" />
-	    	</MaskGroup>
+			<MaskGroup maskUri="pkg:/images/detailPageGradient.png" maskSize="[1600,600]" maskOffset="[500,0]">
+				<Poster id="detailBackgroundPoster" translation = "[ 0, 0 ]" 
+        width = "1900" 
+        height = "1100" />
+			</MaskGroup>
 
-		  <Label
-		translation="[150, 150]" width="1000"
-  		id="detailMainTitle"
-  		height="44"
+			<Label translation="[150, 200]" width="1000" id="detailMainTitle" height="44"
   		horizAlign = "left"
-  		vertAlign = "center" >
-		  
-	    		<Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="20"/>
-	    	</Label>
-		  
-		   <Label
-		translation="[150, 200]" width="1000"
-  		id="durationText"
-  		height="44"
-		  text="Duration : "
+  		vertAlign = "center">
+
+				<Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="50"/>
+			</Label>
+
+			<Label translation="[150, 260]" width="1000" id="durationText" height="44" text="Duration : "
   		horizAlign = "left"
-  		vertAlign = "center" >
-		  
-	    		<Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="20"/>
-	    	</Label>
+  		vertAlign = "center">
 
-  <Label
-		translation="[250, 200]" width="1000"
-  		id="duration"
-  		height="44"
+				<Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="27"/>
+			</Label>
+
+			<Label translation="[290, 260]" width="1000" id="duration" height="44"
   		horizAlign = "left"
-  		vertAlign = "center" >
-		  
-	    		<Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="20"/>
-	    	</Label>
+  		vertAlign = "center">
 
-			
-		   <Label
-		translation="[300, 200]" width="1000"
-  		id="minutesText"
-  		height="44"
-		  text="minutes"
+				<Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="27"/>
+			</Label>
+
+
+			<Label translation="[350, 260]" width="1000" id="minutesText" height="44" text="minutes"
   		horizAlign = "left"
-  		vertAlign = "center" >
-		  
-	    		<Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="20"/>
-	    	</Label>
+  		vertAlign = "center">
+
+				<Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="27"/>
+			</Label>
 
 
-		     <Label 
-        id="detailDescription" 
-        translation="[150,250]"
-         width="500"
-          height="200"
-          horizAlign = "left"
-          wrap="true" numLines="10"
-          vertAlign = "top"
-           lineSpacing="1"
-         >
-	    		<Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="20"/>
-	    	</Label>
+			<Label id="detailDescription" translation="[150,320]" width="1000" height="300"
+          horizAlign = "left" wrap="true" numLines="10"
+          vertAlign = "top" lineSpacing="1">
+				<Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-Regular.ttf" size="33"/>
+			</Label>
 
-	<ButtonGroup id="detailScreenButton" buttonHeight="65" layoutDirection="horiz" translation="[100,500]"/>
+			<ButtonGroup id="detailScreenButton" buttonHeight="65" layoutDirection="horiz" translation="[150,700]"/>
 
-	    	<Video  width="1280" height="720" id="detailScreenVideo" visible="false" />
-			
-   </Rectangle>
+			<Video width="1600" height="1100" id="detailScreenVideo" visible="false" />
+
+		</Rectangle>
 		<Video id ="videoNode" visible="false"></Video>
 	</children>
 </component>

@@ -35,7 +35,7 @@ function playVideo(msg as object)
 
             videocontent = createObject("RoSGNode", "ContentNode")
             videocontent.title = m.top.videoTitle
-            videocontent.url = m.global.videoLink
+            videocontent.url = "https://player.vimeo.com/external/355618127.hd.mp4?s=a8269a0c23e577c19d2053df4f25fd5026fe2290&profile_id=174"
             m.video.content = videocontent
             m.video.visible = true
             print "m.top.videoTitle"
