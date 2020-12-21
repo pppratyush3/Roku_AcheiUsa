@@ -12,10 +12,9 @@ sub showChannelSGScreen(args)
   scene.backgroundColor = "0x000000FF"
   scene.backgroundURI = ""
   screen.show()
-  deeplink = getDeepLinks(args)
   m.global = screen.getGlobalNode()
   m.global.addField("deeplink", "assocarray", false)
-  m.global.deeplink = deeplink
+  m.global.deeplink = getDeepLinks(args)
 
   while(true)
     msg = wait(0, m.port)

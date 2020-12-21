@@ -43,8 +43,7 @@
 				<Font role="font" uri="pkg:/font/AvenirNextBold/AvenirNext-BoldItalic.ttf" size="27"/>
 			</Label>
 
-
-			<Label translation="[350, 260]" width="1000" id="minutesText" height="44" text="minutes"
+			<Label translation="[350, 260]" width="1000" id="minutesText" height="44" text="Seconds"
   		horizAlign = "left"
   		vertAlign = "center">
 

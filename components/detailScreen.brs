@@ -1,14 +1,13 @@
 sub init()
     m.buttons = m.top.findNode("detailScreenButton")
     m.buttons.buttons = ["Watch now", "Add to playlist"]
-    m.video = m.top.findNode("detailScreenVideo")
     m.buttons.observeField("buttonSelected", "playVideo")
-    print m.global.deeplink
+    m.video = m.top.findNode("detailScreenVideo")
+    m.video.observeField("state", "onVideoStateChanged")
 end sub
 
 function onKeyEvent(key as string, press as boolean) as boolean
     result = false
-
     if key = "right" or key = "left"
         if m.buttons.buttonFocused = 0
             m.buttons.buttonFocused = 1
@@ -36,17 +35,21 @@ function playVideo(msg as object)
 
             videocontent = createObject("RoSGNode", "ContentNode")
             videocontent.title = m.top.videoTitle
-            videocontent.url = "https://player.vimeo.com/external/355618127.hd.mp4?s=a8269a0c23e577c19d2053df4f25fd5026fe2290&profile_id=174"
+            videocontent.url = m.global.videoLink
             m.video.content = videocontent
             m.video.visible = true
             m.video.control = "play"
-            print "m.top.videoTitle"
-            print m.top.videoTitle
-            print "m.global.videoLink"
-            print m.global.videoLink
             m.video.setFocus(true)
 
+        end if
+    end if
+end function
 
+function onVideoStateChanged(msg as object)
+    if type(msg) = "roSGNodeEvent" and msg.getField() = "state"
+        if msg.getData() = "finished"
+            m.video.visible = "false"
+            m.video.control = "stop"
         end if
     end if
 end function
